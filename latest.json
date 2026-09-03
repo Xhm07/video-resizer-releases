@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "version": "2.2.5",
+  "tag_name": "v2.2.5",
+  "title": "视频改尺寸 v2.2.5",
+  "notes": "测试更新进度条用",
+  "page_url": "https://github.com/Xhm07/video-resizer-releases/releases/tag/v2.2.5",
+  "asset_name": "VideoResizeSetup.exe",
+  "asset_url": "https://github.com/Xhm07/video-resizer-releases/releases/download/v2.2.5/VideoResizeSetup.exe",
+  "sha256": "97bd058970572a8d0130360ae5f3e74c6f75947e703ec0c627c9e0cffdd33b3f",
+  "asset_size": 128356592
+}
