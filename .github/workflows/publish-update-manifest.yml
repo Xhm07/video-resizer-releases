@@ -1,0 +1,104 @@
+name: Publish update manifest
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v6
+        with:
+          ref: main
+
+      - name: Generate latest.json
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPOSITORY: ${{ github.repository }}
+        run: |
+          python3 - <<'PY'
+          import json
+          import os
+          import re
+          import urllib.request
+          from pathlib import Path
+
+          repository = os.environ["GH_REPOSITORY"]
+          token = os.environ["GH_TOKEN"]
+
+          request = urllib.request.Request(
+              f"https://api.github.com/repos/{repository}/releases/latest",
+              headers={
+                  "Accept": "application/vnd.github+json",
+                  "Authorization": f"Bearer {token}",
+                  "User-Agent": "video-resizer-manifest",
+                  "X-GitHub-Api-Version": "2026-03-10",
+              },
+          )
+
+          with urllib.request.urlopen(request, timeout=30) as response:
+              release = json.load(response)
+
+          tag_name = str(release.get("tag_name") or "").strip()
+          match = re.fullmatch(r"[vV]?(\d+\.\d+\.\d+)", tag_name)
+          if not match:
+              raise RuntimeError(f"版本标签格式无效：{tag_name}")
+
+          assets = release.get("assets") or []
+          asset = next(
+              (
+                  item
+                  for item in assets
+                  if str(item.get("name") or "").lower()
+                  == "videoresizesetup.exe"
+              ),
+              None,
+          )
+          if asset is None:
+              raise RuntimeError("Release 中找不到 VideoResizeSetup.exe")
+
+          digest = str(asset.get("digest") or "").lower()
+          if not re.fullmatch(r"sha256:[0-9a-f]{64}", digest):
+              raise RuntimeError("安装包缺少有效的 SHA256")
+
+          manifest = {
+              "schema_version": 1,
+              "version": match.group(1),
+              "tag_name": tag_name,
+              "title": str(release.get("name") or tag_name),
+              "notes": str(release.get("body") or "")[:4000],
+              "page_url": str(release.get("html_url") or ""),
+              "asset_name": str(asset["name"]),
+              "asset_url": str(asset["browser_download_url"]),
+              "sha256": digest.split(":", 1)[1],
+              "asset_size": int(asset.get("size") or 0),
+          }
+
+          Path("latest.json").write_text(
+              json.dumps(manifest, ensure_ascii=False, indent=2) + "\n",
+              encoding="utf-8",
+          )
+          PY
+
+      - name: Commit latest.json
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add latest.json
+
+          if git diff --cached --quiet; then
+            echo "latest.json is already current"
+            exit 0
+          fi
+
+          git commit -m "Update latest release manifest"
+          git push origin HEAD:main
