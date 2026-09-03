@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
-  "version": "2.2.6",
-  "tag_name": "v2.2.6",
-  "title": "视频改尺寸 v2.2.6",
-  "notes": "GitHub API 请求次数达到上限（更新提示弹窗的问题），换成静态更新清单",
-  "page_url": "https://github.com/Xhm07/video-resizer-releases/releases/tag/v2.2.6",
+  "version": "2.2.7",
+  "tag_name": "v2.2.7",
+  "title": "视频改尺寸 v2.2.7",
+  "notes": "测试静态更新清单是否成功",
+  "page_url": "https://github.com/Xhm07/video-resizer-releases/releases/tag/v2.2.7",
   "asset_name": "VideoResizeSetup.exe",
-  "asset_url": "https://github.com/Xhm07/video-resizer-releases/releases/download/v2.2.6/VideoResizeSetup.exe",
-  "sha256": "79524b9f9e1fca196402eb4410503d328f2353e22a2769a505cfbc50f56ffc1e",
-  "asset_size": 128365884
+  "asset_url": "https://github.com/Xhm07/video-resizer-releases/releases/download/v2.2.7/VideoResizeSetup.exe",
+  "sha256": "a583e7b269807221dc5c060abdc64cbb677d46caf9f62c523be1ea014e01ac29",
+  "asset_size": 128384004
 }
