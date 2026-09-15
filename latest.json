@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
-  "version": "2.2.7",
-  "tag_name": "v2.2.7",
-  "title": "视频改尺寸 v2.2.7",
-  "notes": "测试静态更新清单是否成功",
-  "page_url": "https://github.com/Xhm07/video-resizer-releases/releases/tag/v2.2.7",
+  "version": "2.2.8",
+  "tag_name": "v2.2.8",
+  "title": "视频改尺寸 v2.2.8",
+  "notes": "## 视频改尺寸 v2.2.8\r\n\r\n- 修复原视频尺寸与输出尺寸一致时画面被再次缩小的问题\r\n- 修复部分有效素材路径首次打开时读取失败的问题\r\n- 新增正片语言复用功能\r\n- 优先使用目标语言的原生正片，缺少时自动调用复用正片\r\n- 支持自动识别并选择需要输出的语言\r\n- 原视频、尾卡和视频框继续按照目标语言独立匹配\r\n- 输出策略的三个尺寸选项改为统一刷新\r\n- 每种语言继续顺序渲染，保持较低内存占用",
+  "page_url": "https://github.com/Xhm07/video-resizer-releases/releases/tag/v2.2.8",
   "asset_name": "VideoResizeSetup.exe",
-  "asset_url": "https://github.com/Xhm07/video-resizer-releases/releases/download/v2.2.7/VideoResizeSetup.exe",
-  "sha256": "a583e7b269807221dc5c060abdc64cbb677d46caf9f62c523be1ea014e01ac29",
-  "asset_size": 128384004
+  "asset_url": "https://github.com/Xhm07/video-resizer-releases/releases/download/v2.2.8/VideoResizeSetup.exe",
+  "sha256": "23c0cba33b6985e3163c38df486e59e24dc6b2b1b188996a7854f60516751791",
+  "asset_size": 128382744
 }
