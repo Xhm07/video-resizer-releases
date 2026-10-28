@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
-  "version": "2.4.1",
-  "tag_name": "v2.4.1",
-  "title": "视频改尺寸 v2.4.1",
-  "notes": "## 视频改尺寸 v2.4.1\r\n\r\n### 时间码与尾卡修复\r\n\r\n- 统一 AE 时间码、软件预览和视频输出的整数帧计算，保持“x秒x帧”显示一致。\r\n- 修复媒体起始时间引起的尾卡入点偏移。\r\n- 统一视频轨、音频轨和容器结束时间，解决尾帧定格和成品时长异常。\r\n- 保留已保存尾卡入点的跨语言复用。\r\n- 入点超出当前视频范围时阻止输出并提示处理。\r\n- “尾卡入点”默认使用“指定时间点”。\r\n- 新增“尾卡时长倒推”，自动读取新尾卡秒数，并要求用户确认后输出。",
-  "page_url": "https://github.com/Xhm07/video-resizer-releases/releases/tag/v2.4.1",
+  "version": "2.5.0",
+  "tag_name": "v2.5.0",
+  "title": "视频改尺寸 v2.5.0",
+  "notes": "视频改尺寸 v2.5.0\r\n\r\n- 新增快速模式和买量模式双入口，可记住上次使用的模式。\r\n- 原视频、视频框和尾卡统一读取真实媒体尺寸。",
+  "page_url": "https://github.com/Xhm07/video-resizer-releases/releases/tag/v2.5.0",
   "asset_name": "VideoResizeSetup.exe",
-  "asset_url": "https://github.com/Xhm07/video-resizer-releases/releases/download/v2.4.1/VideoResizeSetup.exe",
-  "sha256": "47051cebafc7aee7e80b2a9129088dcb0ddcd86e293590a385cf80a0b765e00f",
-  "asset_size": 128388345
+  "asset_url": "https://github.com/Xhm07/video-resizer-releases/releases/download/v2.5.0/VideoResizeSetup.exe",
+  "sha256": "ef684759e8ec0e9ab9b699a0f143bb75a3b87a8e31c743a53083aff7daeba147",
+  "asset_size": 128424863
 }
