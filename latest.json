@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
-  "version": "2.5.0",
-  "tag_name": "v2.5.0",
-  "title": "视频改尺寸 v2.5.0",
-  "notes": "视频改尺寸 v2.5.0\r\n\r\n- 新增快速模式和买量模式双入口，可记住上次使用的模式。\r\n- 原视频、视频框和尾卡统一读取真实媒体尺寸。",
-  "page_url": "https://github.com/Xhm07/video-resizer-releases/releases/tag/v2.5.0",
+  "version": "2.6.0",
+  "tag_name": "v2.6.0",
+  "title": "视频改尺寸 v2.6.0｜全新界面、繁中支持与操作引导",
+  "notes": "这次对界面和常用操作做了较大调整，素材选择、尾卡设置、检查预览和批量输出都更清楚了。\r\n\r\n1. 全新界面：重新整理素材、尾卡、尺寸和输出区域，常用选项更容易找到。\r\n2. 模式名称更直观：原“快速／买量”模式改为“单语言／多语言”，进入后可随时切换。\r\n3. 新增繁体中文：支持简繁切换，初始语言跟随 Windows，其他系统语言暂时默认简体中文。\r\n4. 新增操作引导：第一次进入模式后自动介绍主要操作，之后也可以点击右上角问号重新查看。\r\n5. 新增输出前检查与成片预览：先检查框和尾卡的匹配结果，预览合成画面与视频样片，再确认输出。支持针对单条任务更换素材。\r\n6. 缩放与加框更方便：无框正片支持“完整显示”或“铺满裁切”，加框范围统一在软件设置中调整。\r\n7. 稳定性改进：优化了一些隐藏bug",
+  "page_url": "https://github.com/Xhm07/video-resizer-releases/releases/tag/v2.6.0",
   "asset_name": "VideoResizeSetup.exe",
-  "asset_url": "https://github.com/Xhm07/video-resizer-releases/releases/download/v2.5.0/VideoResizeSetup.exe",
-  "sha256": "ef684759e8ec0e9ab9b699a0f143bb75a3b87a8e31c743a53083aff7daeba147",
-  "asset_size": 128424863
+  "asset_url": "https://github.com/Xhm07/video-resizer-releases/releases/download/v2.6.0/VideoResizeSetup.exe",
+  "sha256": "70e0e24b3725b8962a276bb568940b934c48b325f2578721b217a455dc6f408a",
+  "asset_size": 128591287
 }
