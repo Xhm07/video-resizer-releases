@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
-  "version": "2.7.0",
-  "tag_name": "v2.7.0",
-  "title": "视频改尺寸 v2.7.0｜支持动画边框、多种搭配输出",
-  "notes": "1. 框支持了透明通道mov格式、序列帧\r\n边框可以一直循环播放，也可以播完后停在最后一张。\r\n\r\n2. 支持一次匹配多种“边框＋片尾”搭配\r\n\r\n3. 视频在边框里的位置可以自己调\r\n觉得人物偏了、画面太小，或者重要内容被挡住，可以在预览里移动画面、放大或缩小。\r\n\r\n4. 支持带透明过渡效果的片尾\r\n片尾可以慢慢盖住原视频，让前后衔接更自然。\r\n\r\n5. 输出设定新增了码率设置、或者文件大小设置。\r\n上传平台有文件大小限制时，可以设置每条成品的大小上限，例如 50 MB。\r\n需要更细致调整时，也能自己设置画质、编码速度和声音参数；平时继续使用自动设置即可。",
-  "page_url": "https://github.com/Xhm07/video-resizer-releases/releases/tag/v2.7.0",
+  "version": "2.7.3",
+  "tag_name": "v2.7.3",
+  "title": "视频改尺寸 v2.7.3",
+  "notes": "1. 新增 CBR（恒定码率）的输出\r\n2. PNG 序列帧读取更快，并且修复了有时读取失败的情况\r\n3. 框内原片的缩放范围扩大到 30%–300%",
+  "page_url": "https://github.com/Xhm07/video-resizer-releases/releases/tag/v2.7.3",
   "asset_name": "VideoResizeSetup.exe",
-  "asset_url": "https://github.com/Xhm07/video-resizer-releases/releases/download/v2.7.0/VideoResizeSetup.exe",
-  "sha256": "6730709df7f87fb43c8d2b6a772ae5d2423179ff39cfa710091ca8e2f74abafc",
-  "asset_size": 131515223
+  "asset_url": "https://github.com/Xhm07/video-resizer-releases/releases/download/v2.7.3/VideoResizeSetup.exe",
+  "sha256": "3f55477fc484c561a346d88d1a2a8e08c28abe3d1f3a6d39efd4b60a224a56ed",
+  "asset_size": 132919706
 }
